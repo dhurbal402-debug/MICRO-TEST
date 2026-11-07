@@ -4,6 +4,8 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const readingsRouter = require('./routes/readings');
+const dns =require("dns");
+dns.setServers(['8.8.8.8','1.1.1.1']);
 
 const app = express();
 const PORT = process.env.PORT || 5000;
