@@ -11,6 +11,8 @@ function isMongoConnected() {
   return mongoose.connection.readyState === 1;
 }
 
+
+
 // POST /api/readings
 // JSON example: { "binId": "BIN-01", "distanceCm": 12.5, "fillLevel": 75 }
 router.post('/', async (req, res) => {
@@ -90,5 +92,8 @@ router.get('/', async (req, res) => {
     return res.status(500).json({ success: false, message: error.message });
   }
 });
+
+
+
 
 module.exports = router;
